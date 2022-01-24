@@ -5,6 +5,7 @@ import (
 	cors "github.com/rs/cors/wrapper/gin"
 	"log"
 	"net/http"
+	"os"
 
 	//"go-play/middleware"
 )
@@ -29,7 +30,7 @@ func Routers() *gin.Engine {
 	router.GET("/", func(c *gin.Context) {
 		log.Println("process...")
 		c.JSON(http.StatusOK, gin.H {
-			"s": "s",
+			"s": os.Getenv("en"),
 		})
 	})
 
