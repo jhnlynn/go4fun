@@ -26,7 +26,7 @@ func Routers() *gin.Engine {
 	})
 
 
-	router.GET("/local", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		log.Println("process...")
 		c.JSON(http.StatusOK, gin.H {
 			"s": "s",
